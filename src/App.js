@@ -13,7 +13,7 @@ import Error from './components/Error';
 
 
 function App() {
-  const [data,setData] = useState();
+  const [data, setData] = useState();
 
   useEffect(() => {
     fetchData();
@@ -31,12 +31,12 @@ function App() {
   return (
     <BrowserRouter >
       <Routes>
-        <Route path="/" element={<Index data={data}/>} />
-        <Route path="/index-two" element={<IndexTwo data={data}/>} />
-        <Route path="/index-three" element={<IndexThree data={data}/>} />
-        <Route path="/index-dark" element={<IndexDark data={data}/>} />
-        <Route path="/index-rtl" element={<IndexRtl data={data}/>} />
-        <Route path="/error" element={<Error/>} />
+        <Route path="/" element={<Index data={data} />} />
+        <Route path="/index-two" element={<IndexTwo data={data} />} />
+        <Route path="/index-three" element={<IndexThree data={data} />} />
+        <Route path="/index-dark" element={<IndexDark data={data} />} />
+        <Route path="/index-rtl" element={<IndexRtl data={data} />} />
+        <Route path="/error" element={<Error />} />
       </Routes>
       <Switcher />
     </BrowserRouter>

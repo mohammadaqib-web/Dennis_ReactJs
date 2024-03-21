@@ -39,22 +39,22 @@ export default function Index(props) {
 
     if (loading) {
         return <div className="text-center">
-            <div className="mx-auto mt-5 loading" style={{border:"10px dotted",width:"5dvw",borderRadius:"50px",height:"10dvh"}}> </div>
-                </div>; // or any loading indicator
+            <div className="mx-auto mt-5 loading" style={{ border: "10px dotted", width: "5dvw", borderRadius: "50px", height: "10dvh" }}> </div>
+        </div>; // or any loading indicator
     }
 
     return (
         <>
-            <Navbar data={data}/>
-            {data.about&&<HeroOne data={data} />}
-            {data.about&&<AboutUs data={data}/>}
-            {data.services&&<Services data={data}/>}
-            {data.about&&<CTABanner data={data}/>}
-            {data.timeline&&<Experience data={data}/>}
-            {data.projects&&<Projects data={data}/>}
-            {data.testimonials&&<Clients data={data}/>}
+            <Navbar data={data} />
+            {data.about && <HeroOne data={data} />}
+            {data.about && <AboutUs data={data} />}
+            {data.services && <Services data={data} />}
+            {data.about && <CTABanner data={data} />}
+            {data.timeline && <Experience data={data} />}
+            {data.projects && <Projects data={data} />}
+            {data.testimonials && <Clients data={data} />}
             <Blogs />
-            <GetInTouch />
+            {data.about && <GetInTouch data={data} />}
             <Footer />
         </>
     )

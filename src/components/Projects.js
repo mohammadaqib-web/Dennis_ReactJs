@@ -27,8 +27,8 @@ export default function Projects(props) {
                             <h3 className="mb-6 md:text-2xl text-xl md:leading-normal leading-normal font-semibold">My Work & Projects</h3>
                         </div>
 
-                        <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 mt-4 gap-[30px]">
-                            {project.map((item, index) => (<div className="text-center mt-4">
+                        <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-[30px]">
+                            {project.map((item, index) => (<div className="text-center mt-2">
                                 <div className="relative group overflow-hidden rounded-lg shadow shadow-slate-200 dark:shadow-gray-800" key={index}>
                                     <img src={item.image.url} alt="" />
                                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-b to-slate-900 from-transparent transition-all duration-500"></div>
@@ -44,9 +44,18 @@ export default function Projects(props) {
                                 </div>
 
                                 <div key={index} className="mt-3 flex justify-between">
-                                    <a href={item.liveurl?item.liveurl:"/error"} className="live-Project font-bold">Live Project</a>
+                                    <a href={item.liveurl ? item.liveurl : "/error"} className="live-Project font-bold">Live Project</a>
 
-                                    <a href={item.githuburl?item.githuburl:"/error"} className="font-bold github-link"><Unicons.UilGithub width={30} /></a>
+                                    <a href={item.githuburl ? item.githuburl : "/error"} className="font-bold github-link"><Unicons.UilGithub width={30} /></a>
+                                </div>
+
+                                <div className="mt-2">
+                                    <strong style={{ display: "block" }} className="bg-amber-500">Tech Used:</strong>
+                                    {item.techStack.map((tech, index) => (<>
+                                        <span key={index}>{tech}</span>
+                                        {index !== item.techStack.length - 1 && <span>,</span>}
+                                    </>
+                                    ))}
                                 </div>
                             </div>
                             ))}
