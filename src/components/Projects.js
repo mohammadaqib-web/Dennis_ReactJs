@@ -36,7 +36,7 @@ export default function Projects(props) {
                     </div>
                     {!isChecked &&
                         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-[30px]">
-                            {project.map((item, index) => (<div className="text-center mt-2 m-6">
+                            {project.map((item, index) => (<div className="text-center mt-2 m-0">
                                 <div className="relative group overflow-hidden rounded-lg shadow shadow-slate-200 dark:shadow-gray-800" key={index}>
                                     <img src={item.image.url} alt="" />
                                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-b to-slate-900 from-transparent transition-all duration-500"></div>
@@ -73,7 +73,7 @@ export default function Projects(props) {
                     <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-[30px]">
                         {project.map((item, index) => {
                             return (
-                                <div className="blog relative rounded-lg shadow shadow-slate-200 dark:shadow-gray-800 overflow-hidden" key={index}>
+                                <div className="blog relative rounded-lg shadow shadow-slate-200 dark:shadow-gray-800 overflow-hidden mt-2" key={index}>
                                     <img src={item.image.url} alt="" />
 
                                     <div className="content p-6">
