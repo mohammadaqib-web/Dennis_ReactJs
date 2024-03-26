@@ -53,7 +53,6 @@ export default function Index(props) {
             {data.timeline && <Experience data={data} />}
             {data.projects && <Projects data={data} />}
             {data.testimonials && <Clients data={data} />}
-            <Blogs />
             {data.about && <GetInTouch data={data} />}
             <Footer />
         </>

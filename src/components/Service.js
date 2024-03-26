@@ -24,9 +24,6 @@ export default function Services(props){
                         <Link to="" className="title h5 text-[17px] font-medium hover:text-amber-500">{item.name}</Link>
                         <p className="text-slate-400 mt-3 text-[15px]">{item.desc}</p>
                         <p className="title h5 mt-3 font-medium text-amber-500">{item.charge}</p>
-                        <div className="mt-5">
-                            <Link href="" className="hover:text-amber-500 dark:hover:text-amber-500 after:bg-amber-500 dark:text-white transition duration-500 inline-flex items-center gap-1">Read More <Unicons.UilArrowRight width={16}/></Link>
-                        </div>
                     </div>
                 </div> 
                 )

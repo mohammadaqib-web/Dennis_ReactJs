@@ -37,7 +37,7 @@ export default function HeroOne(props){
                     </div>
 
                     <div className="relative">
-                        <img src={data&&data.about?data.about.avatar.url:"/images/hero/2.png"} style={{height:"100vh"}} alt=""/>
+                        <img src={data&&data.about?data.about.avatar.url:"/images/hero/2.png"} alt=""/>
 
                         <div className="absolute lg:bottom-20 md:bottom-10 bottom-2 ltr:md:-left-5 ltr:left-2 rtl:md:-right-5 rtl:right-2 p-4 rounded-lg shadow-md dark:shadow-gray-800 bg-white dark:bg-slate-900 m-3 w-44 text-center">
                             <span className="text-3xl font-medium mb-0"><span className="counter-value font-bold" data-target="125"> <CountUp
